@@ -1,0 +1,8 @@
+$white: #fefefe;
+$cop-blue: #015;
+$cherry: #f60f33;
+$taupe: #aa9;
+
+@mixin easeOut {
+    transition: 0.2s ease-out all;
+}

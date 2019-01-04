@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+nav {
+  background: url("/dist/img/police-car1.jpeg");
+  min-height: 9em;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 3em 3em;
+  padding: 0; }
+  nav .logo {
+    grid-column: 1 / 2;
+    grid-row: 1/2; }
+
+.nav-links {
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  justify-self: flex-end;
+  flex-grow: 1;
+  flex-flow: row;
+  padding: 0;
+  width: 100%;
+  bottom: 0;
+  max-height: 3em; }
+  .nav-links a {
+    text-align: center;
+    padding: 10px;
+    background: #fefefe;
+    color: #015;
+    width: 100%;
+    margin: 0 4px;
+    border-radius: 2px; }
+    .nav-links a:hover {
+      background: #015;
+      color: #fefefe;
+      transition: 0.2s ease-out all; }
+
+.operation-hours {
+  background: #fefefe;
+  color: #f60f33; }
+  .operation-hours p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4rem; }
+
+.banner {
+  width: 80%;
+  display: grid;
+  grid-template-areas: "headline headline headline" "para image image" "para image image" "para image image";
+  grid-column-gap: 10px;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+  background: #aa9; }
+  .banner h1 {
+    grid-area: headline;
+    font-size: 74px;
+    text-align: center;
+    margin-bottom: 20px; }
+  .banner .para {
+    grid-area: para; }
+    .banner .para h3 {
+      font-size: 44px;
+      width: 80%;
+      text-align: center;
+      margin-bottom: 20px; }
+    .banner .para p {
+      width: 80%;
+      font-size: 14px;
+      text-align: right;
+      margin: 0 auto; }
+  .banner img {
+    grid-area: image;
+    max-width: 100%; }
+
+.footer-main {
+  background: #015;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fefefe; }
+
+.footer-col-1 {
+  margin-right: 20px; }
+
+.footer-col-2 {
+  margin-right: 10px;
+  display: grid;
+  grid-template-areas: "header header header" "column1 column2 column3"; }
+  .footer-col-2 h3 {
+    grid-area: header; }
+  .footer-col-2 ul:first-of-type {
+    grid-area: column1; }
+  .footer-col-2 ul {
+    grid-area: column2; }
+  .footer-col-2 ul:last-of-type {
+    grid-area: column3; }
+
+.circles {
+  background: #fefefe;
+  display: flex;
+  align-content: center;
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid black; }
+  .circles .node {
+    display: block;
+    padding: 10px;
+    text-align: center; }
+    .circles .node img {
+      border-radius: 50%;
+      width: 80%;
+      margin: 0 auto; }
+    .circles .node p {
+      width: 80%; }

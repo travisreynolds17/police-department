@@ -1,0 +1,191 @@
+@import "config";
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    background: url("/dist/img/police-car1.jpeg");
+    min-height: 9em;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 3em 3em;
+    padding: 0;
+    
+    
+
+.logo {
+    grid-column: 1 / 2;
+grid-row: 1/2;
+}
+
+
+}
+
+.nav-links { 
+    grid-row: 3;
+    grid-column: 2;
+    display: flex;
+    justify-self: flex-end;
+    flex-grow: 1;
+    flex-flow: row;
+    padding: 0;
+    width: 100%;
+    bottom: 0;
+    max-height: 3em;
+    
+    
+
+a {
+    text-align: center;
+    padding: 10px;
+    background: $white;
+    color: $cop-blue;
+    width: 100%;
+    margin: 0 4px;
+    border-radius: 2px;
+
+    &:hover {
+        background: $cop-blue;
+        color: $white;
+        @include easeOut;
+    }
+}
+}
+
+
+
+.operation-hours {
+background: $white;
+color: $cherry;
+
+p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4rem;
+}
+}
+
+.banner {
+    width: 80%;
+    display: grid;
+    grid-template-areas: "headline headline headline"
+    "para image image"
+    "para image image"
+    "para image image";
+    grid-column-gap: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    background: $taupe;
+
+
+    h1 {
+        grid-area: headline;
+        font-size: 74px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .para {
+        grid-area: para;
+        h3 {
+            font-size: 44px;
+            width: 80%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        p {
+            width: 80%;
+            font-size: 14px;
+            text-align: right;
+            margin: 0 auto;
+        }
+    }
+    
+
+    img {
+        grid-area: image;
+        max-width: 100%;
+    }
+}
+.footer-main {
+    background: $cop-blue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    color: $white;
+}
+
+.footer-col-1 {
+margin-right: 20px;
+
+}
+
+.footer-col-2 {
+    margin-right: 10px;
+    display: grid;
+    grid-template-areas: "header header header"
+    "column1 column2 column3";
+
+    h3 {
+        grid-area: header;
+    }
+
+    ul:first-of-type {
+        grid-area: column1;
+    }
+
+    ul {
+        grid-area: column2;
+    }
+    ul:last-of-type {
+        grid-area: column3;
+    }
+
+}
+
+.circles {
+    background: $white;
+    display: flex;
+    align-content: center;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid black;
+
+    .node {
+        display: block;
+        padding: 10px;
+        text-align: center;
+
+        img {
+            border-radius: 50%;
+            width: 80%;
+            margin: 0 auto;
+
+        }
+        
+        p {
+            width: 80%;
+            
+        }
+    }
+} 
+
+
+@import "mobile";
