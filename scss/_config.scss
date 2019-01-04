@@ -1,8 +1,9 @@
 $white: #fefefe;
-$cop-blue: #015;
+$cop-blue: rgb(23, 27, 48);
 $cherry: #f60f33;
 $taupe: #aa9;
+$badge-gold: #ff7;
 
 @mixin easeOut {
-    transition: 0.2s ease-out all;
+    transition: 0.9s ease-out all;
 }

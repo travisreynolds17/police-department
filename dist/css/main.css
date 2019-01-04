@@ -1,7 +1,14 @@
+/* UNIVERSAL STYLES ----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0; }
+
+body {
+  background: url("/dist/img/background-vertical.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 a {
   text-decoration: none; }
@@ -9,40 +16,66 @@ a {
 li {
   list-style: none; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-self: center;
+  color: #fefefe; }
+
 nav {
-  background: url("/dist/img/police-car1.jpeg");
   min-height: 9em;
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 3em 3em;
+  width: 100%;
   padding: 0; }
-  nav .logo {
-    grid-column: 1 / 2;
-    grid-row: 1/2; }
 
 .nav-links {
-  grid-row: 3;
-  grid-column: 2;
   display: flex;
-  justify-self: flex-end;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
   flex-grow: 1;
   flex-flow: row;
   padding: 0;
-  width: 100%;
-  bottom: 0;
-  max-height: 3em; }
+  width: 90%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 2rem; }
   .nav-links a {
     text-align: center;
     padding: 10px;
-    background: #fefefe;
-    color: #015;
+    color: #fefefe;
     width: 100%;
-    margin: 0 4px;
+    margin: 0 auto;
     border-radius: 2px; }
     .nav-links a:hover {
-      background: #015;
-      color: #fefefe;
-      transition: 0.2s ease-out all; }
+      color: #ff7;
+      transition: 0.9s ease-out all; }
+
+.banner {
+  display: grid;
+  grid-template-areas: "head head head" "mid-1 mid-2 mid-2" "foot foot foot";
+  width: 70%;
+  margin: 0 auto; }
+  .banner h1 {
+    font-size: 132px;
+    letter-spacing: 4px;
+    text-transform: uppercase; }
+  .banner h4 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    width: 100%; }
+  .banner :nth-child(1) {
+    grid-area: head; }
+  .banner :nth-child(2) {
+    grid-area: mid-1; }
+  .banner :nth-child(3) {
+    grid-area: mid-2;
+    padding: 0 10%; }
+  .banner :nth-child(4) {
+    grid-area: foot;
+    color: #171b30; }
 
 .operation-hours {
   background: #fefefe;
@@ -52,38 +85,8 @@ nav {
     text-align: center;
     font-size: 1.4rem; }
 
-.banner {
-  width: 80%;
-  display: grid;
-  grid-template-areas: "headline headline headline" "para image image" "para image image" "para image image";
-  grid-column-gap: 10px;
-  margin: 10px auto;
-  padding: 20px;
-  text-align: center;
-  background: #aa9; }
-  .banner h1 {
-    grid-area: headline;
-    font-size: 74px;
-    text-align: center;
-    margin-bottom: 20px; }
-  .banner .para {
-    grid-area: para; }
-    .banner .para h3 {
-      font-size: 44px;
-      width: 80%;
-      text-align: center;
-      margin-bottom: 20px; }
-    .banner .para p {
-      width: 80%;
-      font-size: 14px;
-      text-align: right;
-      margin: 0 auto; }
-  .banner img {
-    grid-area: image;
-    max-width: 100%; }
-
 .footer-main {
-  background: #015;
+  background: #171b30;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 20px;
@@ -125,3 +128,25 @@ nav {
       margin: 0 auto; }
     .circles .node p {
       width: 80%; }
+
+.bio-card {
+  padding: 10px;
+  width: 300px;
+  text-align: center; }
+  .bio-card:nth-of-type(odd) {
+    background: #171b30;
+    color: #fefefe;
+    margin: 0 20% 0 0; }
+  .bio-card:nth-of-type(even) {
+    background: #fefefe;
+    color: #171b30;
+    margin: 0 80% 0 0; }
+
+/* RESOURCE STYLES ----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
+/* HOW DO I ... STYLES ----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
+/* SERVICES STYLES ----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
+/* OUR DEPARTMENT STYLES ----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
