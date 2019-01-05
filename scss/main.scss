@@ -45,7 +45,7 @@ nav {
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex: 1 1 0;
     flex-flow: row;
     padding: 0; 
     width: 90%;
@@ -55,16 +55,23 @@ nav {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 2rem;
+    text-align: center;
     
-    
+    img {
+        flex-grow: 1;
+    }
 
     a {
+        min-width: 200px;
+        display: flex;
         text-align: center;
         padding: 10px;
         color: $white;
         width: 100%;
         margin: 0 auto;
-        border-radius: 2px;
+        border: 1px solid green;
+        flex-grow: 1;
+
 
         &:hover {
             
@@ -193,25 +200,54 @@ margin-right: 20px;
 } 
 
 // breakout boxes paired with a picture for an officer's biography or story snippet
+
+.card-container {
+    background: $white;
+    display: flex;
+    flex-flow: row;
+    flex: 1 1 0;
+    margin: 10px;
+}
+
+
 .bio-card {
     
-    padding: 10px;
-    
-    width: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 0;
+    width: 500px;
     text-align: center;
+    height: 600px;
+    padding: 20px;
+
+    img {
+        width: 100%;
+    }
+
+    a { 
+        border: 1px solid $badge-gold;
+        padding: 10px;
+        color: $badge-gold;
+    }
 
     // alternate color schemes of cards
     &:nth-of-type(odd) {
         background: $cop-blue;
         color: $white;
-        margin: 0 20% 0 0;
     }
 
     &:nth-of-type(even){
         background: $white;
         color: $cop-blue;
-        margin: 0 80% 0 0;
+
+        a {
+            color: $cop-blue;
+            border: 1px solid $cop-blue;
+        }
     }
+
 
 }
 

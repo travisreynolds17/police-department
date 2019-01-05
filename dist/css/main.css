@@ -32,7 +32,7 @@ nav {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  flex-grow: 1;
+  flex: 1 1 0;
   flex-flow: row;
   padding: 0;
   width: 90%;
@@ -41,14 +41,20 @@ nav {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-weight: 2rem; }
+  font-weight: 2rem;
+  text-align: center; }
+  .nav-links img {
+    flex-grow: 1; }
   .nav-links a {
+    min-width: 200px;
+    display: flex;
     text-align: center;
     padding: 10px;
     color: #fefefe;
     width: 100%;
     margin: 0 auto;
-    border-radius: 2px; }
+    border: 1px solid green;
+    flex-grow: 1; }
     .nav-links a:hover {
       color: #ff7;
       transition: 0.9s ease-out all; }
@@ -129,18 +135,38 @@ nav {
     .circles .node p {
       width: 80%; }
 
+.card-container {
+  background: #fefefe;
+  display: flex;
+  flex-flow: row;
+  flex: 1 1 0;
+  margin: 10px; }
+
 .bio-card {
-  padding: 10px;
-  width: 300px;
-  text-align: center; }
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 0;
+  width: 500px;
+  text-align: center;
+  height: 600px;
+  padding: 20px; }
+  .bio-card img {
+    width: 100%; }
+  .bio-card a {
+    border: 1px solid #ff7;
+    padding: 10px;
+    color: #ff7; }
   .bio-card:nth-of-type(odd) {
     background: #171b30;
-    color: #fefefe;
-    margin: 0 20% 0 0; }
+    color: #fefefe; }
   .bio-card:nth-of-type(even) {
     background: #fefefe;
-    color: #171b30;
-    margin: 0 80% 0 0; }
+    color: #171b30; }
+    .bio-card:nth-of-type(even) a {
+      color: #171b30;
+      border: 1px solid #171b30; }
 
 /* RESOURCE STYLES ----------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------*/

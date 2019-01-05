@@ -7,3 +7,36 @@ $badge-gold: #ff7;
 @mixin easeOut {
     transition: 0.9s ease-out all;
 }
+
+// mobile breakpoints
+
+// cellphone
+@mixin smScreen {
+    @media screen and (max-width:500px) {
+        @content;
+    }
+}
+
+// tablet
+
+@mixin mdScreen {
+    @media screen and (max-width: 768px)
+    {
+        @content;
+    }
+}
+
+// desktop 
+@mixin lgScreen {
+    @media screen and (min-width: 769px) and (max-width: 1170px){
+        @content;
+    }
+}
+
+// TV or extra large display
+
+@mixin xlScreen {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+} 
