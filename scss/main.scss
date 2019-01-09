@@ -54,8 +54,7 @@ nav {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-weight: 2rem;
-    text-align: center;
+    font-weight: 300;
     
     img {
         flex-grow: 1;
@@ -69,7 +68,6 @@ nav {
         color: $white;
         width: 100%;
         margin: 0 auto;
-        border: 1px solid green;
         flex-grow: 1;
 
 
@@ -142,33 +140,7 @@ p {
     color: $white;
 }
 
-.footer-col-1 {
-margin-right: 20px;
 
-}
-
-.footer-col-2 {
-    margin-right: 10px;
-    display: grid;
-    grid-template-areas: "header header header"
-    "column1 column2 column3";
-
-    h3 {
-        grid-area: header;
-    }
-
-    ul:first-of-type {
-        grid-area: column1;
-    }
-
-    ul {
-        grid-area: column2;
-    }
-    ul:last-of-type {
-        grid-area: column3;
-    }
-
-}
 
 // teasers consisting of a circle image, header, small paragraph of text
 .circles {
@@ -249,6 +221,26 @@ margin-right: 20px;
     }
 
 
+}
+
+// slide-show styles
+
+.slide {
+
+    margin: 0 auto;
+    background: $white;
+    padding: 10px;
+    max-width: 100%;
+
+    &.show {
+        transform: translate3d(2000px,0,0);
+        @include easeOut;
+    }
+
+    &.hide {
+        transform: translate3d(-2000px, 0,0);
+        @include easeOut;
+    }
 }
 
 /* RESOURCE STYLES ----------------------------------------------------------------------------------

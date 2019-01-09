@@ -41,8 +41,7 @@ nav {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-weight: 2rem;
-  text-align: center; }
+  font-weight: 300; }
   .nav-links img {
     flex-grow: 1; }
   .nav-links a {
@@ -53,7 +52,6 @@ nav {
     color: #fefefe;
     width: 100%;
     margin: 0 auto;
-    border: 1px solid green;
     flex-grow: 1; }
     .nav-links a:hover {
       color: #ff7;
@@ -167,6 +165,18 @@ nav {
     .bio-card:nth-of-type(even) a {
       color: #171b30;
       border: 1px solid #171b30; }
+
+.slide {
+  margin: 0 auto;
+  background: #fefefe;
+  padding: 10px;
+  max-width: 100%; }
+  .slide.show {
+    transform: translate3d(2000px, 0, 0);
+    transition: 0.9s ease-out all; }
+  .slide.hide {
+    transform: translate3d(-2000px, 0, 0);
+    transition: 0.9s ease-out all; }
 
 /* RESOURCE STYLES ----------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------*/
