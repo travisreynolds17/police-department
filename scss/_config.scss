@@ -1,42 +1,50 @@
 $white: #fefefe;
+$white-dark: #dcdcdc;
 $cop-blue: rgb(23, 27, 48);
+$cop-lt-blue: rgb(70, 84, 105);
 $cherry: #f60f33;
 $taupe: #aa9;
 $badge-gold: #ff7;
 
 @mixin easeOut {
-    transition: 0.9s ease-out all;
+  transition: 0.9s ease-out all;
 }
 
+@mixin gradientWhite {
+  background: linear-gradient($white, $white-dark);
+}
+
+@mixin gradientBlue {
+  background: linear-gradient($cop-blue, $cop-lt-blue);
+}
 // mobile breakpoints
 
 // cellphone
 @mixin smScreen {
-    @media screen and (max-width:500px) {
-        @content;
-    }
+  @media screen and (max-width: 500px) {
+    @content;
+  }
 }
 
 // tablet
 
 @mixin mdScreen {
-    @media screen and (max-width: 768px)
-    {
-        @content;
-    }
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 
-// desktop 
+// desktop
 @mixin lgScreen {
-    @media screen and (min-width: 769px) and (max-width: 1170px){
-        @content;
-    }
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
 
 // TV or extra large display
 
 @mixin xlScreen {
-    @media screen and (min-width: 1171px) {
-        @content;
-    }
-} 
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
