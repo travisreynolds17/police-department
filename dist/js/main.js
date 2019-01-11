@@ -1,9 +1,11 @@
 // simple image carousel
 
 const imageMain = document.querySelector("#image-main");
+const navLinks = document.querySelector(".nav-links");
+const navLogo = document.querySelector(".nav-logo");
 
 // duration between image changes
-const changeTime = 4000;
+const changeTime = 3000;
 // to store current class of main image
 let count = 0;
 
@@ -23,18 +25,37 @@ function init() {
 
 function startCarousel() {
   window.setInterval(() => {
-    if (count == imgClass.length) {
+    count++;
+
+    if (count === imgClass.length) {
       count = 0;
-    } else {
-      count++;
     }
     // remove image classes
-    for (let i = 0; i < imgClass.length; i++) {
+    for (let i = 0; i <= imgClass.length; i++) {
       imageMain.classList.remove(imgClass[i]);
     }
     //add new image class
+
     imageMain.classList.add(imgClass[count]);
   }, changeTime);
 }
+
+// scroll event that changes navbar to sticky nav
+
+window.addEventListener("scroll", function(e) {
+  // reduce performance load
+  requestAnimationFrame(function() {
+    if (window.pageYOffset > navLinks.offsetTop + 100) {
+      navLinks.classList.add("sticky");
+      // replace image logo with text
+      navLogo.innerHTML = "{City Name} P.D.";
+    } else {
+      navLinks.classList.remove("sticky");
+      // restore image logo
+      navLogo.innerHTML =
+        "<img src='dist/img/badge-template.png' alt='police-badge-logo'>";
+    }
+  });
+});
 
 init();
