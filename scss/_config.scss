@@ -5,6 +5,7 @@ $cop-lt-blue: rgb(70, 84, 105);
 $cherry: #f60f33;
 $taupe: #aa9;
 $badge-gold: #ff7;
+$black: rgb(10, 12, 12);
 
 @mixin easeOut {
   transition: 0.6s ease-in all;
@@ -41,15 +42,7 @@ $badge-gold: #ff7;
 
 // desktop
 @mixin lgScreen {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
-    @content;
-  }
-}
-
-// TV or extra large display
-
-@mixin xlScreen {
-  @media screen and (min-width: 1171px) {
+  @media screen and (min-width: 769px) {
     @content;
   }
 }
