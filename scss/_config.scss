@@ -23,26 +23,3 @@ $black: rgb(10, 12, 12);
 @mixin gradientBlue {
   background: linear-gradient($cop-blue, $cop-lt-blue);
 }
-// mobile breakpoints
-
-// cellphone
-@mixin smScreen {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
-
-// tablet
-
-@mixin mdScreen {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-// desktop
-@mixin lgScreen {
-  @media screen and (min-width: 769px) {
-    @content;
-  }
-}

@@ -13,6 +13,10 @@
 body {
   font-size: 10px; // default font-size so we can use em units throughout
   font-family: "Roboto", sans-serif;
+
+  background: url("../img/background-vertical.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -253,6 +257,7 @@ footer {
 
   p {
     color: $white;
+    font-size: 1.4em;
   }
 
   h2 {
@@ -385,5 +390,3 @@ footer {
     border-radius: 1em;
   }
 }
-
-@import "mobile";

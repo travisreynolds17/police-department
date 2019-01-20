@@ -7,7 +7,10 @@
 
 body {
   font-size: 10px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  background: url("../img/background-vertical.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 a {
   text-decoration: none;
@@ -183,7 +186,8 @@ footer {
   padding: 2em;
   border-radius: 0.3em; }
   .contact p {
-    color: #fefefe; }
+    color: #fefefe;
+    font-size: 1.4em; }
   .contact h2 {
     color: #ff7;
     font-size: 3.8em; }
@@ -284,46 +288,3 @@ footer {
   .nav-links.sticky a:hover {
     background: #171b30;
     border-radius: 1em; }
-
-@media screen and (max-width: 500px) {
-  body {
-    max-width: 500px;
-    background: #fefefe; }
-  nav {
-    background: #0a0c0c;
-    margin: 0 auto;
-    width: 100%; }
-  .nav-links {
-    padding: 10px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); }
-    .nav-links a {
-      color: #6478ff;
-      border: 1px solid #171b30; }
-  .nav-logo {
-    display: none; }
-  .banner {
-    grid-template-areas: "head mid-1" "foot foot" "mid-2 mid-2";
-    grid-gap: 4px;
-    width: 95%; }
-    .banner h1 {
-      font-size: 54px; }
-  .contact {
-    display: block;
-    width: 90%;
-    max-width: 500px;
-    margin: 0; }
-    .contact #image-main {
-      height: 100%;
-      width: 480px; } }
-
-@media screen and (min-width: 769px) {
-  body {
-    background: url("../img/background-vertical.jpg");
-    background-size: cover;
-    background-repeat: no-repeat; }
-  nav {
-    min-height: 9em;
-    padding: 0;
-    margin-top: 20px; } }
